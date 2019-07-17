@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import "./App.css";
+import Jumbotron from "../../components/Jumbotron";
 
 class AugRealRoutes extends Component {
   render() {
     return (
       <div>
-        augmented reality route data
+        <Jumbotron>
+          Augmented Reality Route Data
+        </Jumbotron>
       </div>
     );
   }

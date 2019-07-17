@@ -1,13 +1,15 @@
-
 import React, { Component } from "react";
 import "./App.css";
+import Jumbotron from "../../components/Jumbotron";
 
 class ClimbingNews extends Component {
   render() {
     return (
       <div>
-        Rock Climbing news scraper
-          rock and ice, climbing porn 
+        <Jumbotron>
+          <p>Rock Climbing news scraper</p>
+          <p>rock and ice, climbing porn</p>
+        </Jumbotron>
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React from "react";
-import "./BookBtn.css";
+import "./style.css";
 
 const BookBtn = props => (
   <button className={`book-btn btn btn-${props.btntype} btn-sm`} {...props}>

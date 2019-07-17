@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import "./App.css";
+import Jumbotron from "../../components/Jumbotron/index.js";
 
 class HomePage extends Component {
   render() {
     return (
       <div>
-        Landing Page
+        <Jumbotron>
+          Home Page
+        </Jumbotron>
       </div>
     );
   }

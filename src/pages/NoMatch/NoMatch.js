@@ -1,12 +1,14 @@
-
 import React, { Component } from "react";
 import "./App.css";
+import Jumbotron from "../../components/Jumbotron";
 
 class NoMatch extends Component {
   render() {
     return (
       <div>
-        No Match
+        <Jumbotron>
+          No Match
+        </Jumbotron>
       </div>
     );
   }

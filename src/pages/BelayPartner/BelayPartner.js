@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import "./App.css";
+import Jumbotron from "../../components/Jumbotron";
 
 class BelayPartner extends Component {
   render() {
     return (
       <div>
-        Belay Partner Finder
-        Should include questions about safety
+        <Jumbotron>
+          <p>Belay Partner Finder</p>
+          <p>Should include questions about safety</p>
+        </Jumbotron>
       </div>
     );
   }
