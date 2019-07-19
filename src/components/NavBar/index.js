@@ -13,16 +13,10 @@ function Title() {
           <a className="nav-link active" href="./CragSearch">Crag Search</a>
         </li>
         <li className="nav-item" id="link">
-          <a className="nav-link" href="./ClimbingNews">Climbing News</a>
+          <a className="nav-link" href="./Community">Community</a>
         </li>
         <li className="nav-item" id="link">
           <a className="nav-link" href="./BelayPartner">Belay Finder</a>
-        </li>
-        <li className="nav-item" id="link">
-          <a className="nav-link" href="./CurrentDeals">Current Deals</a>
-        </li>
-        <li className="nav-item" id="link">
-          <a className="nav-link" href="./Forum">Forum</a>
         </li>
         <li className="nav-item" id="link">
           <a className="nav-link" href="./MeetUp">MeetUp</a>

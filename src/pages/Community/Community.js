@@ -7,7 +7,7 @@ class Forum extends Component {
     return (
       <div>
         <Jumbotron>
-          Forum
+          Community
         </Jumbotron>
       </div>
     );
