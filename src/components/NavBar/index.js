@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function Title() {
+export default function Navbar() {
   return (
     <div>
       <ul className="nav">
@@ -29,4 +29,3 @@ function Title() {
   );
 }
 
-export default Title;
