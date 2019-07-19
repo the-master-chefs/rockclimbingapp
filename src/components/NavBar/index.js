@@ -10,10 +10,10 @@ function Title() {
         </li>
         <section id="Blank"></section>
         <li className="nav-item" id="link">
-          <a className="nav-link active" href="./CragSearch">Crag Search</a>
+          <a className="nav-link" href="./Community">Community</a>
         </li>
         <li className="nav-item" id="link">
-          <a className="nav-link" href="./Community">Community</a>
+          <a className="nav-link active" href="./CragSearch">Crag Search</a>
         </li>
         <li className="nav-item" id="link">
           <a className="nav-link" href="./BelayPartner">Belay Finder</a>
