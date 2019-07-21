@@ -14,7 +14,6 @@ import Navbar from "./components/NavBar/index.js";
 // import Jumbotron from "./components/Jumbotron/index.js";
 import Footer from "./components/Footer/index.js"
 
-
 class App extends React.Component {
 
   render() {
@@ -25,9 +24,10 @@ class App extends React.Component {
           <Container>
             <div className="content">
               <Route exact path="/" component={HomePage}/>
-              <Route exact path="/Community" component={Community}/>
-              <Route exact path="/CragSearch" component={CragSearch}/>
-              <Route exact path="/BelayPartner" component={BelayPartner}/>
+              <Route path="/Community" component={Community}/>
+              <Route path="/CragSearch" component={CragSearch}/>
+              <Route path="/BelayPartner" component={BelayPartner}/>
+              {/*<Route component={NoMatch} />*/}
             </div>
           </Container>
         </div> 
