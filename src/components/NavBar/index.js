@@ -1,34 +1,41 @@
 import React from "react";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "./nav.css";
 
 
-class App extends React.Component {
+export default class NavBar extends React.Component {
 
   render() {
     return (
-      <div>
-
-        <button type="button" id="btn0" className="btn btn-primary" onClick={this.props.HomePage}>
-          Sendsville
-        </button>
-
-        <button type="button" id="btn0" className="btn btn-primary" onClick={this.props.Community}>
-          Community
-        </button>
-        
-        <button type="button" id="btn0" className="btn btn-primary" onClick={this.props.CragSearch}>
-          Crag Search
-        </button>
-        
-        <button type="button" id="btn0" className="btn btn-primary" onClick={this.props.BelayPartner}>
-          Belay Finder
-        </button>
-      
+      <div className="navigation">
+<ul className="nav">
+        <li className="nav-li">
+          <Link to="/">Home</Link>
+        </li>
+        <li className="nav-li">
+          <Link to="/cragsearch">Crag Search</Link>
+        </li>
+        <li className="nav-li">
+          <Link to="/belaypartner">Belay Partner</Link>
+        </li>
+        <li className="nav-li">
+          <Link to="/community">Community</Link>
+        </li>
+        <li className="nav-li">
+          <Link to="/meetup">Meetup</Link>
+        </li>
+        <li className="nav-li">
+          <Link to="/augrealroutes">AR</Link>
+        </li>
+        <li className="nav-li">
+          <Link to="/signup">Sign Up</Link>
+        </li>
+      </ul>
       </div>
     )}
 }
 
-export default App;
+
 
 
 

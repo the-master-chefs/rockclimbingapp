@@ -1,0 +1,28 @@
+header {
+	background-color: white;
+	height: 80px;
+}
+
+#link {
+	color: #4aaaa5;
+}
+
+.navigation {
+	padding: 18px;
+	background-color: #d45308;
+}
+
+.nav {
+	list-style: none;
+    display: inline-flex;
+}
+
+.nav-li {
+	margin-right: 12px;
+	margin-left: 12px;
+	color: white;
+}
+
+a {
+	color: azure;
+}
