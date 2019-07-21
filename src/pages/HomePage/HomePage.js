@@ -8,7 +8,7 @@ class HomePage extends Component {
     return (
       <div>
         <Jumbotron>
-          Home Page
+          Home Page Data
         </Jumbotron>
       </div>
     );
