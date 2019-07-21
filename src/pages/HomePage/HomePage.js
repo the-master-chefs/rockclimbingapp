@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Jumbotron from "../../components/Jumbotron/index.js";
+import Container from "../../components/Container";
 
 
 class HomePage extends Component {
@@ -8,8 +9,11 @@ class HomePage extends Component {
     return (
       <div>
         <Jumbotron>
-          Home Page Data
+          <h3>Home Page</h3>
         </Jumbotron>
+        <Container>
+          Content
+        </Container>
       </div>
     );
   }
