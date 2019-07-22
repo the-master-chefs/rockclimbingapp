@@ -1,16 +1,31 @@
 import React from "react";
+import { useAuth0 } from "../../react-auth0-wrapper";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
 import "./nav.css";
 
+const NavBar = () => {
+  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
-export default class NavBar extends React.Component {
+  return (
+    <div className="navigation">
+      {!isAuthenticated && (
+        <div className="icon icon-enter"
+          onClick={() =>
+            loginWithRedirect({})
+          }
+        >
+          <FontAwesomeIcon icon={faUser} />
+        </div>
+      )}
 
-  render() {
-    return (
-      <div className="navigation">
-<ul className="nav">
+      {isAuthenticated && <div className="icon icon-enter" onClick={() => logout()}><FontAwesomeIcon icon={faUser} /></div>}
+      {isAuthenticated && (
+      <span>
+        <ul className="nav">
         <li className="nav-li">
-          <Link to="/">Home</Link>
+        <Link to="/">Home</Link>&nbsp;
         </li>
         <li className="nav-li">
           <Link to="/cragsearch">Crag Search</Link>
@@ -28,57 +43,13 @@ export default class NavBar extends React.Component {
           <Link to="/augrealroutes">AR</Link>
         </li>
         <li className="nav-li">
-          <Link to="/signup">Sign Up</Link>
+        <Link to="/profile">Profile</Link>
         </li>
-      </ul>
-      </div>
+        </ul>
+      </span>
     )}
-}
+    </div>
+  );
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React from "react";
-// import "./style.css";
-
-// export default function Navbar() {
-//   return (
-//     <div>
-//       <ul className="nav">
-//         <li className="nav-item">
-//           <a className="nav-link active" href="/"><h4>Rock Climbing App</h4></a>
-//         </li>
-//         <section id="Blank"></section>
-//         <li className="nav-item" id="link">
-//           <a className="nav-link" href="./Community">Community</a>
-//         </li>
-//         <li className="nav-item" id="link">
-//           <a className="nav-link active" href="./CragSearch">Crag Search</a>
-//         </li>
-//         <li className="nav-item" id="link">
-//           <a className="nav-link" href="./BelayPartner">Belay Finder</a>
-//         </li>
-//         {/*<li className="nav-item" id="link">
-//           <a className="nav-link" href="./MeetUp">MeetUp</a>
-//         </li>*/}
-//         {/*<li className="nav-item" id="link">
-//           <a className="nav-link" href="./AugRealRoutes">AR Routes</a>
-//         </li>*/}
-//       </ul>
-//     </div>
-//   );
-// }
-
+export default NavBar;

@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import "./BelayPartner.css";
 import Jumbotron from "../../components/Jumbotron";
-import Layout from "../../components/Layout/layout";
 
 class BelayPartner extends Component {
   render() {
     return (
       <div>
-        <Layout>
+       
         <Jumbotron>
           <p>Belay Partner Finder</p>
           <p>Should include questions about safety</p>
@@ -21,7 +20,7 @@ class BelayPartner extends Component {
           <p>How often do you have to cancel?</p>
           <p>What is the hardest route you have ever climbed?</p> 
         </Jumbotron>
-        </Layout>
+        
       </div>
     );
   }
