@@ -1,32 +1,56 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import "antd/dist/antd.css";
 import "./style.css";
+import { Menu, Icon } from "antd";
 
-export default function Navbar(props) {
-  return (
-    <div>
-      <ul className="nav">
-        <li className="nav-item">
-          <NavLink to="/"><h4>Rock Climbing App</h4></NavLink>
-        </li>
-        <section id="Blank"></section>
-        <li className="nav-item" id="link">
-          <NavLink to="/Community">Community</NavLink>
-        </li>
-        <li className="nav-item" id="link">
-          <NavLink to="/CragSearch">Crag Search</NavLink>
-        </li>
-        <li className="nav-item" id="link">
-          <NavLink to="/BelayPartner">Belay Finder</NavLink>
-        </li>
-        {/*<li className="nav-item" id="link">
-          <a className="nav-link" href="./MeetUp">MeetUp</a>
-        </li>*/}
-        {/*<li className="nav-item" id="link">
-          <a className="nav-link" href="./AugRealRoutes">AR Routes</a>
-        </li>*/}
-      </ul>
-    </div>
-  );
+class Navbar extends React.Component {
+  state = {
+    current: "home"
+  };
+
+  handleClick = e => {
+    console.log("click ", e);
+    this.setState({
+      current: e.key
+    });
+  };
+
+  render() {
+    return (
+      <Menu
+        onClick={this.handleClick}
+        selectedKeys={[this.state.current]}
+        mode="horizontal"
+      >
+        <Menu.Item key="home">
+          <span>
+            <a href="/">
+              <Icon type="home" />
+              Home
+            </a>
+          </span>
+        </Menu.Item>
+        <Menu.Item key="community">
+          <a href="/community">
+            <Icon type="team" />
+            Community
+          </a>
+        </Menu.Item>
+        <Menu.Item key="cragSearch">
+          <a href="/cragsearch">
+            <Icon type="search" />
+            CragSearch
+          </a>
+        </Menu.Item>
+        <Menu.Item key="belayPartner">
+          <a href="/belaypartner">
+            <Icon type="user-add" />
+            BelayPartner
+          </a>
+        </Menu.Item>
+      </Menu>
+    );
+  }
 }
 
+export default Navbar;
