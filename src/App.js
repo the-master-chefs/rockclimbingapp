@@ -5,22 +5,6 @@ import Footer from "./components/Footer/index.js";
 import Jumbotron from "./components/Jumbotron/index.js";
 
 class App extends React.Component {
-  state = {
-    page: "HomePage"
-  };
-
-  HomePage = () => {
-    this.setState({ page: "HomePage" });
-  };
-  Community = () => {
-    this.setState({ page: "Community" });
-  };
-  CragSearch = () => {
-    this.setState({ page: "CragSearch" });
-  };
-  BelayPartner = () => {
-    this.setState({ page: "BelayPartner" });
-  };
 
   render() {
     return (
