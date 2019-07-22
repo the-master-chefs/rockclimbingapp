@@ -1,56 +1,55 @@
 import React from "react";
-import "antd/dist/antd.css";
-import "./style.css";
-import { Menu, Icon } from "antd";
+import { useAuth0 } from "../../react-auth0-wrapper";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
+import "./nav.css";
 
-class Navbar extends React.Component {
-  state = {
-    current: "home"
-  };
+const NavBar = () => {
+  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
-  handleClick = e => {
-    console.log("click ", e);
-    this.setState({
-      current: e.key
-    });
-  };
+  return (
+    <div className="navigation">
+      {!isAuthenticated && (
+        <div className="icon icon-enter"
+          onClick={() =>
+            loginWithRedirect({})
+          }
+        >
+          <FontAwesomeIcon icon={faUser} />
+        </div>
+      )}
 
-  render() {
-    return (
-      <Menu
-        onClick={this.handleClick}
-        selectedKeys={[this.state.current]}
-        mode="horizontal"
-      >
-        <Menu.Item key="home">
-          <span>
-            <a href="/">
-              <Icon type="home" />
-              Home
-            </a>
-          </span>
-        </Menu.Item>
-        <Menu.Item key="community">
-          <a href="/community">
-            <Icon type="team" />
-            Community
-          </a>
-        </Menu.Item>
-        <Menu.Item key="cragSearch">
-          <a href="/cragsearch">
-            <Icon type="search" />
-            CragSearch
-          </a>
-        </Menu.Item>
-        <Menu.Item key="belayPartner">
-          <a href="/belaypartner">
-            <Icon type="user-add" />
-            BelayPartner
-          </a>
-        </Menu.Item>
-      </Menu>
-    );
-  }
-}
+      {isAuthenticated && <div className="icon icon-enter" onClick={() => logout()}><FontAwesomeIcon icon={faUser} /></div>}
+      {isAuthenticated && (
+      <span>
+        <ul className="nav">
+        <li className="nav-li">
+        <Link to="/">Home</Link>&nbsp;
+        </li>
+        <li className="nav-li">
+          <Link to="/cragsearch">Crag Search</Link>
+        </li>
+        <li className="nav-li">
+          <Link to="/belaypartner">Belay Partner</Link>
+        </li>
+        <li className="nav-li">
+          <Link to="/community">Community</Link>
+        </li>
+        <li className="nav-li">
+          <Link to="/meetup">Meetup</Link>
+        </li>
+        <li className="nav-li">
+          <Link to="/augrealroutes">AR</Link>
+        </li>
+        <li className="nav-li">
+        <Link to="/profile">Profile</Link>
+        </li>
+        </ul>
+      </span>
+    )}
+    </div>
+  );
+};
 
-export default Navbar;
+export default NavBar;

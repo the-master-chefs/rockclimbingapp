@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./CragSearch.css";
 import Jumbotron from "../../components/Jumbotron";
 import Container from "../../components/Container";
 
@@ -7,6 +7,7 @@ class CragSearch extends Component {
   render() {
     return (
       <div>
+        
         <Jumbotron>
           <h3>Crag finder</h3>
         </Jumbotron>

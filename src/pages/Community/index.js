@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./Community.css";
 import Jumbotron from "../../components/Jumbotron";
 import Container from "../../components/Container/index.js";
 
@@ -7,6 +7,7 @@ class Forum extends Component {
   render() {
     return (
       <div>
+        
         <Jumbotron>
           <h3>Community</h3> 
         </Jumbotron>

@@ -6,9 +6,11 @@ class AugRealRoutes extends Component {
   render() {
     return (
       <div>
+    
         <Jumbotron>
           Augmented Reality Route Data
         </Jumbotron>
+     
       </div>
     );
   }
