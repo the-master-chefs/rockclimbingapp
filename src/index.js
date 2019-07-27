@@ -4,6 +4,8 @@ import HomePage from "./pages/HomePage/index";
 import * as serviceWorker from "./serviceWorker";
 import { Auth0Provider } from "./react-auth0-wrapper";
 import config from "./auth_config.json";
+import { Provider } from "react-redux";
+import store from "./store";
 
 // A function that routes the user to the right place
 // after login
@@ -18,14 +20,16 @@ const onRedirectCallback = appState => {
 };
 
 ReactDOM.render(
-  <Auth0Provider
-    domain={config.domain}
-    client_id={config.clientId}
-    redirect_uri={window.location.origin}
-    onRedirectCallback={onRedirectCallback}
->
-    <HomePage />
-  </Auth0Provider>,
+  <Provider store= {store}>
+    <Auth0Provider
+      domain={config.domain}
+      client_id={config.clientId}
+      redirect_uri={window.location.origin}
+      onRedirectCallback={onRedirectCallback}
+    >
+      <HomePage />
+    </Auth0Provider>
+  </Provider>,
   document.getElementById("root")
 );
 

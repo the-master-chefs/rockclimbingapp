@@ -12,7 +12,9 @@ class NoMatch extends Component {
         <Jumbotron>
           This page does not exist!
         </Jumbotron>
-        
+        <Container>
+          <img src={FallingGIF} alt="GIF of a falling climber"/>
+        </Container>
       </div>
     );
   }

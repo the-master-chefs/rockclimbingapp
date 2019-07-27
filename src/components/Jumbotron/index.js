@@ -3,7 +3,9 @@ import "./style.css";
 
 const Jumbotron = ({ children }) => (
   <div>
-    {children}
+    <h1>
+      {children}
+    </h1>
   </div>
 );
 
