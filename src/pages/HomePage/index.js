@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./HomePage.css";
 import Layout from "../../components/Layout/layout";
-import Jumbotron from "../../components/Jumbotron/index.js";
+// import Jumbotron from "../../components/Jumbotron/index.js";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Profile from "../../components/Profile";
  import CragSearch from "../CragSearch/index";
