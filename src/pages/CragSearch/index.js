@@ -3,11 +3,14 @@ import "./CragSearch.css";
 import Jumbotron from "../../components/Jumbotron";
 import Container from "../../components/Container";
 
+import { connect } from "react-redux";
+import { users } from "../../reducers/users";
+import actions from "../../actions";
+
 class CragSearch extends Component {
-  render() {
+  render(props) {
     return (
       <div>
-        
         <Jumbotron>
           <h3>Crag finder</h3>
         </Jumbotron>
@@ -19,9 +22,23 @@ class CragSearch extends Component {
           <p>popular routes: Mountain Project Data API (www.mountainproject.com/data)</p>
           <p>average difficulty: Mountain Project Data API</p>
         </Container>
+        {props}
       </div>
     );
   }
 }
 
-export default CragSearch;
+console.log(users);
+
+const mapDispatchToProps = dispatch => {
+  return {
+    logout: payload => dispatch(actions.logout(payload))
+  };
+};
+
+export default connect(function(state){
+  return {
+    name: state.users.name,
+  };
+}, mapDispatchToProps)(CragSearch);
+
