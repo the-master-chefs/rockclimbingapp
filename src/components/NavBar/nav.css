@@ -126,3 +126,9 @@ a {
 	margin-top: 13px;
 	font-size: xx-large;
   }
+	
+	.profile {
+	border-radius: 50%;
+    width: 64%;
+	margin: inherit;
+	}

@@ -1,7 +1,7 @@
 import React from "react";
 import { useAuth0 } from "../react-auth0-wrapper";
 
-const Profile = () => {
+const Name = () => {
   const { loading, user } = useAuth0();
 
   if (loading || !user) {
@@ -11,13 +11,10 @@ const Profile = () => {
 
   return (
     <>
-      <img src={user.picture} alt="Profile" />
+      <h2>{user.nickname}</h2>
 
-      <h2>{user.name}</h2>
-      <p>{user.email}</p>
-      <code>{JSON.stringify(user, null, 2)}</code>
     </>
   );
 };
 
-export default Profile;
+export default Name;
