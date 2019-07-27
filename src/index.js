@@ -7,8 +7,7 @@ import config from "./auth_config.json";
 import { Provider } from "react-redux";
 import store from "./store";
 
-// A function that routes the user to the right place
-// after login
+// A function that routes the user to the right place after login
 const onRedirectCallback = appState => {
   window.history.replaceState(
     {},
