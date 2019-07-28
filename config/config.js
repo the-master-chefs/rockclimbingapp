@@ -29,14 +29,6 @@ const config = {
     "dialect": "mysql",
     "operatorsAliases": false
   },
-  // "production": {
-  //   "username": "oksaj277smiocexp",
-  //   "password": "xm8hchwk11pd53wq",
-  //   "database": "ufcol60q0xqtfeju",
-  //   "host": "u0zbt18wwjva9e0v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-  //   "dialect": "mysql",
-  //   "operatorsAliases": false
-  // },
   "test": {
     "username": "root",
     "password": null,
@@ -44,8 +36,19 @@ const config = {
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
+  },
+  "production": {
+    "username": "ktd3apk9izip3j18",
+    "password": "kpcql9uv6u11q7u5",
+    "database": "vfb7pcesq16fp2i5",
+    "host": "s0znzigqvfehvff5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql",
+    "operatorsAliases": false
   }
 };
+
+
+
 
 if(process.env.NODE_ENV === "production"){
   config.production = {
