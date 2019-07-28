@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  let Customer = sequelize.define("Customer", {
+  let Comments = sequelize.define("Comments", {
     unique_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -43,7 +43,7 @@ module.exports = function(sequelize, DataTypes) {
     zip: DataTypes.STRING(10)
   },{
     freezeTableName: true,
-    tableName: 'Customer'
+    tableName: 'Comments'
   });
-  return Customer;
+  return Comments;
 };
