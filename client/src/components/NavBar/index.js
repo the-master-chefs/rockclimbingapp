@@ -35,8 +35,8 @@ const NavBar = () => {
         <>
   
       <span>
-        <Name/>
         <ul className="nav">
+          <li className="nav-li"><Name/></li>
         <li className="nav-li">
         <Link to="/profile">Profile</Link>
         </li>

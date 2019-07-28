@@ -11,7 +11,7 @@ const Name = () => {
 
   return (
     <>
-      <h2>{user.nickname}</h2>
+      <p>{user.nickname}</p>
 
     </>
   );
