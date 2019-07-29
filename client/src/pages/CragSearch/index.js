@@ -6,6 +6,7 @@ import Container from "../../components/Container";
 import { connect } from "react-redux";
 import { users } from "../../reducers/users";
 import actions from "../../actions";
+import Maps from "../../components/Map/index.js"
 
 class CragSearch extends Component {
   render(props) {
@@ -14,6 +15,9 @@ class CragSearch extends Component {
         <Jumbotron>
           <h3>Crag finder</h3>
         </Jumbotron>
+        <Container>
+          <Maps />
+        </Container>
         <Container>
           <p>List of crags around me Mountain Project Data API</p>
           <p>when to go, </p>
