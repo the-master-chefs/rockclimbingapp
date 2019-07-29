@@ -9,6 +9,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
     "dark-sky": "^1.1.5",
     "express": "^4.17.1",
     "google-map-react": "^1.1.4",
@@ -21,6 +22,7 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "redux-starter-kit": "^0.6.2",
+    "request": "^2.88.0",
     "sequelize": "^5.11.0",
     "typescript": "^3.5.3"
   },
@@ -44,5 +46,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-master-chefs/rockclimbingapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/the-master-chefs/rockclimbingapp/issues"
+  },
+  "homepage": "https://github.com/the-master-chefs/rockclimbingapp#readme"
 }
