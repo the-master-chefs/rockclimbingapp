@@ -25,6 +25,10 @@ class CragSearch extends Component {
           <p>water levels: USG Water Services API, Dark Sky API, Google Maps API</p> 
           <p>popular routes: Mountain Project Data API (www.mountainproject.com/data)</p>
           <p>average difficulty: Mountain Project Data API</p>
+          <br />
+          
+          <p>MP: https://www.mountainproject.com/data/get-routes-for-lat-lon?lat=30.26&lon=-97.74&maxDistance=10&minDiff=5.6&maxDiff=5.10&key=108549143-9b4de567d0f4ef08b3592355812a2285</p>
+          <p>USWS: https://waterservices.usgs.gov/nwis/iv/?format=json&bBox=-98.000000,30.000000,-96.000000,30.500000&parameterCd=00060,00065&siteStatus=active</p>
         </Container>
         {props}
       </div>
