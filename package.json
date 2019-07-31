@@ -2,7 +2,7 @@
   "name": "rockclimbingapp",
   "version": "1.0.0",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start":  "concurrently \"node server.js\" \"cd client && npm run start\"",
