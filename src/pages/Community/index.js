@@ -4,14 +4,14 @@ var cheerio = require("cheerio");
 
 var axios = require("axios");
 
-export async function Community() {
+export function Community() {
     var results = [];
     console.log(
       "\n***********************************\n" +
         "Grabbing every thread name and link\n" +
         "from rockandice's board:" +
         "\n***********************************\n"
-    );
+    ); 
     
     // Making a request via axios for reddit's "webdev" board. The page's HTML is passed as the callback's third argument
     axios.get("https://rockandice.com/climbing-news/").then(function(response) {
@@ -49,7 +49,7 @@ export async function Community() {
         <div>
         
           
-            <h3>Belay Partner Finder</h3>
+            <h3>Community</h3>
           
           
         </div>
