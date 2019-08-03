@@ -3,7 +3,7 @@ CREATE DATABASE scrapedData;
 USE scrapedData;
 
 CREATE TABLE scrape (
-	id integer auto_increment not null primary key,
+	unique_id integer auto_increment not null primary key,
 	type varchar(10) not null,
 	site varchar(50) not null,
     url varchar(255),
