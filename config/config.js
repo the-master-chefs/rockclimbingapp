@@ -8,13 +8,12 @@ function getDBConfigFromUrl(url){
     "database": firstSplit[3].split("/").slice(-1)[0],
     "host": secondSplit[1],
   };
-  
 }
 
 const config = {
   "development": {
     "username": "root",
-    "password": "bexley10",
+    "password": "$Wordf1sh211986",
     "database": "scrapedData",
     "host": "127.0.0.1",
     "dialect": "mysql",
