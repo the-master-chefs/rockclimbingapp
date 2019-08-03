@@ -7,7 +7,7 @@ const Name = () => {
   if (loading || !user) {
     return "Loading...";
   }
-  console.log(user);
+
 
   return (
     <>

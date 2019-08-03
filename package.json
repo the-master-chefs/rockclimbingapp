@@ -22,6 +22,8 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "dark-sky": "^1.1.5",
     "concurrently": "^4.1.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -31,8 +33,35 @@
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.1",
     "redux-starter-kit": "^0.6.2",
-    "sequelize": "^5.11.0"
+    "request": "^2.88.0",
+    "sequelize": "^5.11.0",
+    "typescript": "^3.5.3"
   },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-master-chefs/rockclimbingapp.git"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "server.js",
   "devDependencies": {},
   "repository": {
     "type": "git",
@@ -42,5 +71,6 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/the-master-chefs/rockclimbingapp/issues"
-  }
+  },
+  "homepage": "https://github.com/the-master-chefs/rockclimbingapp#readme"
 }
