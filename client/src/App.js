@@ -16,7 +16,9 @@ class App extends React.Component {
           CragSearch={this.CragSearch.bind(this)}
           BelayPartner={this.BelayPartner.bind(this)}
         /> */}
-        <Jumbotron>{this.state.page}</Jumbotron>
+        <Jumbotron>
+          {this.state.page}
+        </Jumbotron>
         <Container />
         <Footer />
       </div>

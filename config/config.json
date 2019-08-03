@@ -1,0 +1,25 @@
+{
+  // Local Host
+  "development": {
+    "username": "root",
+    "password": "$Wordf1sh211986",
+    "database": "scrapedData",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  
+  // MySQL PHP database
+  // "production": {
+  //   "username": "oksaj277smiocexp",
+  //   "password": "xm8hchwk11pd53wq",
+  //   "database": "ufcol60q0xqtfeju",
+  //   "host": "u0zbt18wwjva9e0v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+  //   "dialect": "mysql",
+  //   "operatorsAliases": false
+  // },
+
+  "production": {
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
+  }
+}
