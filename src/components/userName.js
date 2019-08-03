@@ -7,11 +7,11 @@ const Name = () => {
   if (loading || !user) {
     return "Loading...";
   }
-  console.log(user);
+
 
   return (
     <>
-      <h2>{user.nickname}</h2>
+      <p>{user.nickname}</p>
 
     </>
   );
