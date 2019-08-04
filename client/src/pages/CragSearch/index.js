@@ -8,6 +8,8 @@ import { users } from "../../reducers/users";
 import actions from "../../actions";
 import Maps from "../../components/Map/index.js"
 
+import Weather from "../../components/Weather/index.js"
+
 class CragSearch extends Component {
   render(props) {
     return (
@@ -36,6 +38,9 @@ class CragSearch extends Component {
               {props}
             </Container>
           </Container>
+        </Container>
+        <Container>
+          <Weather />
         </Container>
         <br />
         <br />
