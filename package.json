@@ -25,10 +25,12 @@
     "if-env": "^1.0.4",
     "mysql2": "^1.6.5",
     "react": "^16.8.6",
+    "react-animated-weather": "^3.0.0",
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.1",
     "redux-starter-kit": "^0.6.2",
-    "sequelize": "^5.11.0"
+    "sequelize": "^5.11.0",
+    "weather": "^1.0.4"
   },
   "devDependencies": {},
   "repository": {
