@@ -8,7 +8,7 @@ function Weather() {
           data-label_1="AUSTIN" 
           data-label_2="WEATHER" 
           data-icons="Climacons Animated" 
-          data-days="3" 
+          data-days="2" 
           data-theme="original" 
         >
           AUSTIN WEATHER

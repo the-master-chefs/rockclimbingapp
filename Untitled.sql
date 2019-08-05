@@ -24,3 +24,4 @@ FROM scrapedData.scrape
 order by unique_id DESC
 ;
 
+-- DELETE FROM scrapedData.scrape 
