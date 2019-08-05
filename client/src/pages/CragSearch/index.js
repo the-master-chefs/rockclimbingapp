@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./CragSearch.css";
 import Jumbotron from "../../components/Jumbotron";
-import Container from "../../components/Container";
+import ContainerA from "../../components/Container";
+import { Container, Row, Col } from 'reactstrap';
 
 import { connect } from "react-redux";
 // import { users } from "../../reducers/users";
@@ -15,33 +16,48 @@ class CragSearch extends Component {
   render(props) {
     return (
       <div>
-        <Jumbotron>
-          <h3>Crag Finder</h3>
-        </Jumbotron>
-        <Container id = "Maps">
+        <ContainerA id = "Title" >
+          <Jumbotron>
+            <h3>Crag Finder</h3>
+          </Jumbotron>
+        </ContainerA>
+
+        <ContainerA id = "Maps">
           <Maps />
+        </ContainerA>
+
+        <Container>
+        <Row>
+          <Col xs="6">
+            <Container id = "Weather">
+              <Weather />
+            </Container>
+          </Col>
+          <Col xs="6">
+            <ContainerA id = "Gauge">
+              <Gauge />
+            </ContainerA>
+          </Col>
+        </Row>
         </Container>
 
-        <Container id = "Weather">
-          <Weather />
-        </Container>
-
-        <Container id = "Gauge">
-          <Gauge 
-            Level = "5"
-          />
-        </Container>
-
-        <Container id = "Notes">
+        <ContainerA id = "Notes">
           <p>List of crags around me Mountain Project Data API</p>
-          <p>when to go, </p>
           <p>water levels: USG Water Services API, Dark Sky API, Google Maps API</p> 
           <p>popular routes: Mountain Project Data API (www.mountainproject.com/data)</p>
           <p>average difficulty: Mountain Project Data API</p>
           <br />
           <p>MP: https://www.mountainproject.com/data/get-routes-for-lat-lon?lat=30.26&lon=-97.74&maxDistance=10&minDiff=5.6&maxDiff=5.10&key=108549143-9b4de567d0f4ef08b3592355812a2285</p>
           <p>USWS: https://waterservices.usgs.gov/nwis/iv/?format=json&bBox=-97.791272,30.17556,-97.651025,30.378428&parameterCd=00060,00065&siteStatus=active</p>
-        </Container>
+        </ContainerA>
+
+
+
+
+
+
+
+
       
 
 
