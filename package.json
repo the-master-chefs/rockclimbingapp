@@ -26,6 +26,8 @@
     "mysql2": "^1.6.5",
     "react": "^16.8.6",
     "react-animated-weather": "^3.0.0",
+    "react-dom": "^16.8.6",
+    "react-liquid-gauge": "^1.2.4",
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.1",
     "redux-starter-kit": "^0.6.2",
