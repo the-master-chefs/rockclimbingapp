@@ -11,7 +11,7 @@ var styles = {
 function MPWidget() {
   return (
     <div>
-      <iframe title="MPWidget" style={styles.widget} frameborder="0" scrolling="no" src="https://www.mountainproject.com/widget?loc=user&x=-10882625&y=3552670&z=10.9&h=550"></iframe>
+      <iframe title="MPWidget" style={styles.widget} frameborder="0" scrolling="no" src="https://www.mountainproject.com/widget?loc=fixed&x=-10879147&y=3540826&z=10.5&h=500"></iframe>
     </div>
   );
 }
