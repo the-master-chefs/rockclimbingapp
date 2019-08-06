@@ -14,7 +14,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(50),
       allowNull: true
     },
-    URL: {
+    url: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
@@ -24,13 +24,13 @@ module.exports = function(sequelize, DataTypes) {
     },
     picture: {
       type: DataTypes.STRING(255),
-      allowNull: false
+      allowNull: true
     },
     description: {
       type: DataTypes.STRING(500),
       allowNull: true
     },
-    article: {
+    articleDate: {
       type: DataTypes.STRING(1000),
       allowNull: true
     },
