@@ -34,13 +34,16 @@ axios.get("https://rockandice.com/climbing-news/").then(function(response) {
       .children("img")
       .attr("alt");
     result.url = $(this)
+      .children("div")
       .children("a")
       .attr("href");
     result.picture = $(this)
+      .children("div")
       .children("a")
       .children("img")
       .attr("src");
     result.articleDate = $(this)
+      .children("div")
       .children("span")
       .text();
 
