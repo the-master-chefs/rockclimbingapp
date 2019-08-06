@@ -9,8 +9,8 @@ const GOOGLE_MAPS_API_KEY = process.env.REACT_APP_API_KEY;
 class SimpleMap extends Component {
   static defaultProps = {
     center: {
-      lat: 30.267,
-      lng: -97.743
+      lat: 30.870,
+      lng: -97.7292
     },
     zoom: 11
   };
@@ -18,15 +18,15 @@ class SimpleMap extends Component {
   render() {
     return (
       // Important! Always set the container height explicitly
-      <div style={{ height: '250px', width: '90%' }}>
+      <div style={{ height: '400px', width: '85%' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: GOOGLE_MAPS_API_KEY }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >
           <AnyReactComponent
-            lat={30.2672}
-            lng={97.7431}
+            lat={30.259}
+            lng={-97.801}
             text="My Marker"
           />
         </GoogleMapReact>

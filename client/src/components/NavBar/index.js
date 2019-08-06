@@ -14,9 +14,7 @@ const NavBar = () => {
     console.log(user)
   }
 
-  if (!isAuthenticated) {
-    console.log(window)
-  }
+  
 
   return (
     <div className="navigation">

@@ -8,7 +8,6 @@ function getDBConfigFromUrl(url){
     "database": firstSplit[3].split("/").slice(-1)[0],
     "host": secondSplit[1],
   };
-  
 }
 
 const config = {

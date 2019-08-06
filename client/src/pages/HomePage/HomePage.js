@@ -9,10 +9,17 @@ class HomePage extends Component {
     return (
       <div>
         <Jumbotron>
-          <h3>Home Page</h3>
+          <h3>Sendsville</h3>
         </Jumbotron>
         <Container>
-          Content
+        Column 1:
+        Title: Sendsville, Population: You.
+        Connect with climbers and learn about what is happening in the climbing world.
+        See photos of climbing adventures for a little motivation.
+        Find new deals on gear consolidated into a single page.
+
+        Column 2: 
+        Registration? Can the pop up that appears when logging in be dropped here?
         </Container>
       </div>
     );
