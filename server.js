@@ -23,6 +23,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+//article scraper
 axios.get("https://rockandice.com/climbing-news/").then(function(response) {
   var $ = cheerio.load(response.data);
   var result = { type: "Article", site: "RockandIce.com" };
@@ -51,6 +52,38 @@ axios.get("https://rockandice.com/climbing-news/").then(function(response) {
       .create(result)
       .then(function(dbArticle) {
         console.log("--Article Added--");
+      })
+      .catch(function(err) {
+        console.log(err);
+      });
+  });
+  console.log(result);
+});
+
+//picture scraper
+axios.get("https://www.mountainproject.com/featured-photos").then(function(response) {
+  var $ = cheerio.load(response.data);
+  var result = { type: "Picture", site: "Mountainproject.com" };
+
+  $(".card-with-photo").each(function(i, element) {
+    result.title = $(this)
+      .children("a")
+      .children("div")
+      .children("img")
+      .attr("alt");
+    result.url = $(this)
+      .children("a")
+      .attr("href");
+    result.picture = $(this)
+      .children("a")
+      .children("div")
+      .children("img")
+      .attr("src");
+
+    db.scrape
+      .create(result)
+      .then(function(dbArticle) {
+        console.log("--Picture Added--");
       })
       .catch(function(err) {
         console.log(err);
