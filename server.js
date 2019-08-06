@@ -27,8 +27,9 @@ axios.get("https://rockandice.com/climbing-news/").then(function(response) {
   var $ = cheerio.load(response.data);
   var result = { type: "Article", site: "RockandIce.com" };
 
-  $(".imgBlock").each(function(i, element) {
+  $(".categoryBlock").each(function(i, element) {
     result.title = $(this)
+      .children("div")
       .children("a")
       .children("img")
       .attr("alt");
@@ -39,6 +40,9 @@ axios.get("https://rockandice.com/climbing-news/").then(function(response) {
       .children("a")
       .children("img")
       .attr("src");
+    result.articleDate = $(this)
+      .children("span")
+      .text();
 
     db.scrape
       .create(result)
