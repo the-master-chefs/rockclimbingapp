@@ -14,7 +14,7 @@ export function Community() {
     ); 
     
     // Making a request via axios for reddit's "webdev" board. The page's HTML is passed as the callback's third argument
-    axios.get("https://rockandice.com/climbing-news/").then(function(response) {
+   /*  axios.get("https://rockandice.com/climbing-news/").then(function(response) {
       // Load the HTML into cheerio and save it to a variable
       // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
       var $ = cheerio.load(response.data);
@@ -44,7 +44,7 @@ export function Community() {
       // Log the results once you've looped through each of the elements found with cheerio
       console.log(results);
       
-    });
+    }); */
     return (
         <div>
         
