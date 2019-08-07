@@ -1,18 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import "./Community.css";
 var cheerio = require("cheerio");
 
 var axios = require("axios");
 
 export function Community() {
-    var results = [];
-    console.log(
-      "\n***********************************\n" +
-        "Grabbing every thread name and link\n" +
-        "from rockandice's board:" +
-        "\n***********************************\n"
-    ); 
-    
+  const [article, setArticle] = useState();
+
+  useEffect(() => {
+    fetch("https://swift-crag.herokuapp.com/scrape", {
+      method: "GET"
+    })
+    .then(res => res.json())
+    .then(data => {
+      setArticle(data);
+    });     
+});
+    console.log({article})
     // Making a request via axios for reddit's "webdev" board. The page's HTML is passed as the callback's third argument
    /*  axios.get("https://rockandice.com/climbing-news/").then(function(response) {
       // Load the HTML into cheerio and save it to a variable
@@ -46,18 +50,18 @@ export function Community() {
       
     }); */
     return (
-        <div>
+      <div>
+      
         
-          
-            <h3>Community</h3>
-          
-          
-        </div>
-      ); 
+          <h3>Community</h3>
+        
+        
+      </div>
+    ); 
 
-    }
+  }
 
-  
-  export default Community;
+
+export default Community;
 
 
