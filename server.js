@@ -128,10 +128,10 @@ axios.get("https://www.backcountry.com/rc/sale-climb").then(function(response) {
 }); 
 
 //retrieving scraper info from database
-/* app.get("/scrape", (req, res) => {
+/*  app.get("/scrape", (req, res) => {
   db.scrape.findAll({}).then(story => res.json(story));
-});  */
-
+});  
+ */
 // Add routes, both API and view
 app.use(routes);
 

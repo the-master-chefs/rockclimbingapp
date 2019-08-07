@@ -5,9 +5,9 @@ var cheerio = require("cheerio");
 var axios = require("axios");
 
 export function Community() {
-  const [article, setArticle] = useState();
+  /* const [article, setArticle] = useState([]);
 
-  /* useEffect(() => {
+  useEffect(() => {
     fetch("http://localhost:3001/scrape", {
       method: "GET"
     })
@@ -15,8 +15,8 @@ export function Community() {
     .then(data => {
       setArticle(data);
     });     
-}); */
-    console.log({article})
+}); 
+    console.log({article}) */
     // Making a request via axios for reddit's "webdev" board. The page's HTML is passed as the callback's third argument
    /*  axios.get("https://rockandice.com/climbing-news/").then(function(response) {
       // Load the HTML into cheerio and save it to a variable
