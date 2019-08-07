@@ -23,6 +23,11 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+//retrieving scraper info from database
+app.get("/scrape", (req, res) => {
+  db.scrape.findAll({}).then(story => res.json(story));
+});
+
 //article scraper
 axios.get("https://rockandice.com/climbing-news/").then(function(response) {
   var $ = cheerio.load(response.data);
