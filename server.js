@@ -116,6 +116,7 @@ axios.get("https://www.backcountry.com/rc/sale-climb").then(function(response) {
         console.log(err);
       });
   });
+
   console.log("-----------");
   console.log(result.title);
   console.log(result.url);
@@ -123,13 +124,21 @@ axios.get("https://www.backcountry.com/rc/sale-climb").then(function(response) {
   console.log(result.description);
 });
 
+  console.log(result);
+}); 
+
+//retrieving scraper info from database
+/* app.get("/scrape", (req, res) => {
+  db.scrape.findAll({}).then(story => res.json(story));
+});  */
+
 // Add routes, both API and view
 app.use(routes);
 
 // Start the API server
 // ADD SEQUELIZE HERE TO CONNECT TO YOUR DB
-db.sequelize.sync({}).then(() => {
-  // var run = require("./scripts/seedDB");
+db.sequelize.sync({ force: true }).then(() => {
+  var run = require("./scripts/seedDB");
 
   app.listen(PORT, () => {
     console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);

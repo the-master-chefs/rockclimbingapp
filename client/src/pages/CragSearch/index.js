@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./CragSearch.css";
 import Jumbotron from "../../components/Jumbotron";
 import ContainerA from "../../components/Container";
@@ -10,9 +10,9 @@ import actions from "../../actions";
 import Gauge from "../../components/Gauge/index.js";
 import Weather from "../../components/Weather/index.js";
 import MPWidget from "../../components/MPWidget/index.js";
+import { getRandomDog } from "../../store.js";
 
-class CragSearch extends Component {
-  render(props) {
+function CragSearch(props) {
     return (
       <div>
         <ContainerA id = "Title" >
@@ -45,6 +45,11 @@ class CragSearch extends Component {
           <p>USWS: https://waterservices.usgs.gov/nwis/iv/?format=json&bBox=-97.791272,30.17556,-97.651025,30.378428&parameterCd=00060,00065&siteStatus=active</p>
         </ContainerA>
 
+        <ContainerA>
+
+        </ContainerA>
+
+
         <br />
         <br />
         <br />
@@ -54,7 +59,6 @@ class CragSearch extends Component {
       </div>
     );
   }
-}
 
 const mapDispatchToProps = dispatch => {
   return {
