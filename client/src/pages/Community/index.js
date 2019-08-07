@@ -7,15 +7,15 @@ var axios = require("axios");
 export function Community() {
   const [article, setArticle] = useState();
 
-  useEffect(() => {
-    fetch("https://swift-crag.herokuapp.com/scrape", {
+  /* useEffect(() => {
+    fetch("http://localhost:3001/scrape", {
       method: "GET"
     })
     .then(res => res.json())
     .then(data => {
       setArticle(data);
     });     
-});
+}); */
     console.log({article})
     // Making a request via axios for reddit's "webdev" board. The page's HTML is passed as the callback's third argument
    /*  axios.get("https://rockandice.com/climbing-news/").then(function(response) {

@@ -23,11 +23,6 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-//retrieving scraper info from database
-app.get("/scrape", (req, res) => {
-  db.scrape.findAll({}).then(story => res.json(story));
-});
-
 //article scraper
 axios.get("https://rockandice.com/climbing-news/").then(function(response) {
   var $ = cheerio.load(response.data);
@@ -63,10 +58,10 @@ axios.get("https://rockandice.com/climbing-news/").then(function(response) {
       });
   });
   console.log(result);
-});
+}); 
 
 //picture scraper
-axios.get("https://www.mountainproject.com/featured-photos").then(function(response) {
+ axios.get("https://www.mountainproject.com/featured-photos").then(function(response) {
   var $ = cheerio.load(response.data);
   var result = { type: "Picture", site: "Mountainproject.com" };
 
@@ -95,15 +90,20 @@ axios.get("https://www.mountainproject.com/featured-photos").then(function(respo
       });
   });
   console.log(result);
-});
+}); 
+
+//retrieving scraper info from database
+/* app.get("/scrape", (req, res) => {
+  db.scrape.findAll({}).then(story => res.json(story));
+});  */
 
 // Add routes, both API and view
 app.use(routes);
 
 // Start the API server
 // ADD SEQUELIZE HERE TO CONNECT TO YOUR DB
-db.sequelize.sync({}).then(() => {
-  // var run = require("./scripts/seedDB");
+db.sequelize.sync({ force: true }).then(() => {
+  var run = require("./scripts/seedDB");
 
   app.listen(PORT, () => {
     console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
