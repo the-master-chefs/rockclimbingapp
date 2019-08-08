@@ -9,7 +9,8 @@ header {
 
 .navigation {
 	padding: 18px;
-	background-color: #d45308;
+	background-color: #B7C68B;
+	display: flex;
 }
 
 .nav {
@@ -27,6 +28,7 @@ header {
 	background-color: #2d2c3e;
 	color: whitesmoke;
 	border-color: #2d2c3e;
+	margin: 0px 2px; 
 }
 
 a {

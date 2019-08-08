@@ -18,6 +18,7 @@ const NavBar = () => {
 
   return (
     <div className="navigation">
+      <h6>SwiftCrag</h6>
       {!isAuthenticated && (
         <div
           onClick={() =>
@@ -35,15 +36,15 @@ const NavBar = () => {
       <span>
         <ul className="nav">
           <li className="nav-li"><Name/></li>
+          <li className="nav-li">
+        <Link to="/home">Home</Link>&nbsp;
+        </li>
         <li className="nav-li">
         <Link to="/profile">Profile</Link>
         </li>
         <li className="nav-li">
           <Link to="/community">Community</Link>
         </li>
-        {/* <li className="nav-li">
-        <Link to="/">Home</Link>&nbsp;
-        </li> */}
         <li className="nav-li">
           <Link to="/cragsearch">Crag Search</Link>
         </li>

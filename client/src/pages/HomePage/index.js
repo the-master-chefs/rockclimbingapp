@@ -9,8 +9,10 @@ import BelayPartner from "../BelayPartner/index";
 import Community from "../Community/index";
 import MeetUp from "../MeetUp/index.js";
 import NoMatch from "../NoMatch/index.js";
+import FrontPage from "../HomePage/HomePage";
 import AugRealRoutes from "../AugRealRoutes/index";
 import PrivateRoute from "../../components/PrivateRoute";
+import NavBar from "../../components/NavBar/index";
 
 
 class HomePage extends Component {
@@ -18,9 +20,11 @@ class HomePage extends Component {
     return (
       <div>
         <BrowserRouter>
+        <NavBar />
         <Layout>
         <Switch>
           <Route path="/" exact />
+          <Route path="/home" component={FrontPage} />
           <Route path="/cragsearch" component={CragSearch} />
           <Route path="/belaypartner" component={BelayPartner} />
           <Route path="/community" component={Community} />
