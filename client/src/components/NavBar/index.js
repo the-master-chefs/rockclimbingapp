@@ -19,7 +19,7 @@ const NavBar = () => {
   return ( 
     <div className="navigation">
       <>
-      <span>
+      <span className="navList">
         <ul className="nav">
           {/* <li className="nav-li"><Name/></li> */}
           <li className="nav-li">
@@ -38,7 +38,7 @@ const NavBar = () => {
       </span>
       </>
       {!isAuthenticated && (
-        <div
+        <div className="login"
           onClick={() =>
             loginWithRedirect({})
           }

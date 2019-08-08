@@ -11,11 +11,16 @@ header {
 	padding: 18px;
 	background-color: #B7C68B;
 	display: flex;
+	align-items: center;
 }
 
 .nav {
 	list-style: none;
     display: inline-flex;
+}
+
+.navList {
+	margin-right: 75rem;
 }
 
 .nav-li {
