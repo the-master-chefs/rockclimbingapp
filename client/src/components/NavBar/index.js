@@ -16,26 +16,12 @@ const NavBar = () => {
 
   
 
-  return (
+  return ( 
     <div className="navigation">
-      <h6>SwiftCrag</h6>
-      {!isAuthenticated && (
-        <div
-          onClick={() =>
-            loginWithRedirect({})
-          }
-        >
-          <button className="login">Login</button>
-        </div>
-      )}
-         
-      {isAuthenticated && <div className="icon icon-enter" onClick={() => logout()}><Image /></div>}
-      {isAuthenticated && (
-        <>
-  
+      <>
       <span>
         <ul className="nav">
-          <li className="nav-li"><Name/></li>
+          {/* <li className="nav-li"><Name/></li> */}
           <li className="nav-li">
         <Link to="/home">Home</Link>&nbsp;
         </li>
@@ -48,16 +34,28 @@ const NavBar = () => {
         <li className="nav-li">
           <Link to="/cragsearch">Crag Search</Link>
         </li>
-        {/* <li className="nav-li">
-          <Link to="/belaypartner">Belay Partner</Link>
-        </li> */}
+        </ul>
+      </span>
+      </>
+      {!isAuthenticated && (
+        <div
+          onClick={() =>
+            loginWithRedirect({})
+          }
+        >
+          <button className="login">Login</button>
+        </div>
         
-        {/* <li className="nav-li">
-          <Link to="/meetup">Meetup</Link>
-        </li> */}
-        {/* <li className="nav-li">
-          <Link to="/augrealroutes">AR</Link>
-        </li> */}
+      )}
+
+
+         
+      {isAuthenticated && <div className="icon icon-enter" onClick={() => logout()}><Image /></div>}
+      {isAuthenticated && (
+        <>
+      <span>
+        <ul className="nav">
+          <li className="nav-li"><Name/></li>
         </ul>
       </span>
       </>
