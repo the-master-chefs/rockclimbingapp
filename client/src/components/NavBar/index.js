@@ -19,12 +19,12 @@ const NavBar = () => {
   return (
     <div className="navigation">
       {!isAuthenticated && (
-        <div className="icon icon-enter"
+        <div
           onClick={() =>
             loginWithRedirect({})
           }
         >
-          <FontAwesomeIcon icon={faUser} />
+          <button className="login">Login</button>
         </div>
       )}
          

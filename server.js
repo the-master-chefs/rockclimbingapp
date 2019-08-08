@@ -91,7 +91,7 @@ if (process.env.NODE_ENV === "production") {
 // });
 
 //deal scraper
-axios.get("https://www.backcountry.com/rc/sale-climb").then(function(response) {
+/* axios.get("https://www.backcountry.com/rc/sale-climb").then(function(response) {
   var $ = cheerio.load(response.data);
   var result = { type: "Deal", site: "Moosejaw.com" };
   $("a.ui-pl-link").each(function(i, element) {
@@ -122,18 +122,19 @@ axios.get("https://www.backcountry.com/rc/sale-climb").then(function(response) {
   console.log(result.url);
   console.log(result.picture);
   console.log(result.description);
-});
+}); */
 
-  console.log(result);
-}); 
+ /*  console.log(result);
+}); */ 
 
 //retrieving scraper info from database
-/*  app.get("/scrape", (req, res) => {
+/*  axios.get("/scrape", (req, res) => {
   db.scrape.findAll({}).then(story => res.json(story));
 });  
+
  */
 // Add routes, both API and view
-app.use(routes);
+//app.use(routes);
 
 // Start the API server
 // ADD SEQUELIZE HERE TO CONNECT TO YOUR DB

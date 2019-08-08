@@ -23,6 +23,12 @@ header {
 	color: white;
 }
 
+.login {
+	background-color: #2d2c3e;
+	color: whitesmoke;
+	border-color: #2d2c3e;
+}
+
 a {
 	color: azure;
 }
