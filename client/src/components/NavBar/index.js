@@ -16,9 +16,8 @@ const NavBar = () => {
 
   
 
-  return (
+  return ( 
     <div className="navigation">
-      <h6>SwiftCrag</h6>
       {!isAuthenticated && (
         <div
           onClick={() =>
@@ -26,13 +25,34 @@ const NavBar = () => {
           }
         >
           <button className="login">Login</button>
+          <>
+      <span>
+        <ul className="nav">
+          {/* <li className="nav-li"><Name/></li> */}
+          <li className="nav-li">
+        <Link to="/home">Home</Link>&nbsp;
+        </li>
+        <li className="nav-li">
+        <Link to="/profile">Profile</Link>
+        </li>
+        <li className="nav-li">
+          <Link to="/community">Community</Link>
+        </li>
+        <li className="nav-li">
+          <Link to="/cragsearch">Crag Search</Link>
+        </li>
+        </ul>
+      </span>
+      </>
         </div>
+        
       )}
+
+
          
       {isAuthenticated && <div className="icon icon-enter" onClick={() => logout()}><Image /></div>}
       {isAuthenticated && (
         <>
-  
       <span>
         <ul className="nav">
           <li className="nav-li"><Name/></li>
