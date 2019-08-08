@@ -8,7 +8,7 @@ export function Community() {
 const [article, setArticle] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/scrape", {
+    fetch("https://swift-crag.herokuapp.com/scrape", {
       method: "GET"
     })
     .then(res => res.json())
