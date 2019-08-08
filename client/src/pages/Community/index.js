@@ -5,7 +5,7 @@ var cheerio = require("cheerio");
 var axios = require("axios");
 
 export function Community() {
-  /* const [article, setArticle] = useState([]);
+const [article, setArticle] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3001/scrape", {
@@ -16,7 +16,7 @@ export function Community() {
       setArticle(data);
     });     
 }); 
-    console.log({article}) */
+    console.log({article}) 
     
     return (
       <div>
