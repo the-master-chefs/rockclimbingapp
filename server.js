@@ -151,7 +151,7 @@ function cleanUpDealsUndefined() {
 
 // Start the API server
 // ADD SEQUELIZE HERE TO CONNECT TO YOUR DB
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync({ force: false }).then(() => {
   const run = require("./scripts/seedDB");
 
   app.listen(PORT, () => {
