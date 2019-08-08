@@ -18,14 +18,7 @@ const NavBar = () => {
 
   return ( 
     <div className="navigation">
-      {!isAuthenticated && (
-        <div
-          onClick={() =>
-            loginWithRedirect({})
-          }
-        >
-          <button className="login">Login</button>
-          <>
+      <>
       <span>
         <ul className="nav">
           {/* <li className="nav-li"><Name/></li> */}
@@ -44,6 +37,13 @@ const NavBar = () => {
         </ul>
       </span>
       </>
+      {!isAuthenticated && (
+        <div
+          onClick={() =>
+            loginWithRedirect({})
+          }
+        >
+          <button className="login">Login</button>
         </div>
         
       )}
@@ -56,28 +56,6 @@ const NavBar = () => {
       <span>
         <ul className="nav">
           <li className="nav-li"><Name/></li>
-          <li className="nav-li">
-        <Link to="/home">Home</Link>&nbsp;
-        </li>
-        <li className="nav-li">
-        <Link to="/profile">Profile</Link>
-        </li>
-        <li className="nav-li">
-          <Link to="/community">Community</Link>
-        </li>
-        <li className="nav-li">
-          <Link to="/cragsearch">Crag Search</Link>
-        </li>
-        {/* <li className="nav-li">
-          <Link to="/belaypartner">Belay Partner</Link>
-        </li> */}
-        
-        {/* <li className="nav-li">
-          <Link to="/meetup">Meetup</Link>
-        </li> */}
-        {/* <li className="nav-li">
-          <Link to="/augrealroutes">AR</Link>
-        </li> */}
         </ul>
       </span>
       </>
