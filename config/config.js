@@ -21,7 +21,7 @@ const config = {
   },
   "test": {
     "username": "root",
-    "password": "$Wordf1sh211986",
+    "password": "bexley10",
     "database": "scrapedData",
     "host": "127.0.0.1",
     "dialect": "mysql",

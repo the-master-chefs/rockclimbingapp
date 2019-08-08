@@ -141,12 +141,13 @@ function cleanUpDealsUndefined() {
 }
 
 //retrieving scraper info from database
-/*  app.get("/scrape", (req, res) => {
+/*  axios.get("/scrape", (req, res) => {
   db.scrape.findAll({}).then(story => res.json(story));
 });  
+
  */
 // Add routes, both API and view
-app.use(routes);
+//app.use(routes);
 
 // Start the API server
 // ADD SEQUELIZE HERE TO CONNECT TO YOUR DB

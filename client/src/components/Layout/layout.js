@@ -5,7 +5,6 @@ import "./layout.css";
 
 const Layout = ({ children }) => (
   <div>
-  <NavBar />
   <div className="contain">
     {children}
   </div>

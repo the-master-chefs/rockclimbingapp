@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import "./App.css";
 import Jumbotron from "../../components/Jumbotron/index.js";
 import Container from "../../components/Container";
 
 
-class HomePage extends Component {
+class FrontPage extends Component {
   render() {
     return (
       <div>
@@ -26,4 +25,4 @@ class HomePage extends Component {
   }
 }
 
-export default HomePage;
+export default FrontPage;
