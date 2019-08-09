@@ -43,8 +43,8 @@ function fetchPictures() {
  }
 
   fetchPictures();
-  fetchArticles();
-  fetchDeals();
+  /* fetchArticles();
+  fetchDeals(); */
 
 
     
