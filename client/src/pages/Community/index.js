@@ -8,7 +8,7 @@ export function Community() {
 const [article, setArticle] = useState([]);
 
   useEffect(() => {
-    fetch("/scrape", {
+    fetch("/community/scrape", {
       method: "GET"
     })
     .then(res => res.json())
