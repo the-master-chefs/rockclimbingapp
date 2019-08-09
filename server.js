@@ -161,7 +161,7 @@ app.get("/:attribute/:value", (request, response) => {
 // Start the API server
 // ADD SEQUELIZE HERE TO CONNECT TO YOUR DB
 db.sequelize.sync({ force: false }).then(() => {
-  // const run = require("./scripts/seedDB");
+  const run = require("./scripts/seedDB");
 
   app.listen(PORT, () => {
     console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
