@@ -21,7 +21,7 @@ function fetchPictures() {
 }
 
  function fetchArticles() {
-   fetch("http://localhost:3001/type/article", {
+   fetch("/type/article", {
        method: "GET"
      })
      .then(res => res.json())
@@ -32,7 +32,7 @@ function fetchPictures() {
  }
 
  function fetchDeals() {
-   fetch("http://localhost:3001/type/deal", {
+   fetch("/type/deal", {
        method: "GET"
      })
      .then(res => res.json())
@@ -40,13 +40,12 @@ function fetchPictures() {
       console.log('this is the deal data', data)
        setDeal(data);
      }); 
-     console.log({deal})
  }
-useEffect(() => {
+
   fetchPictures();
   fetchArticles();
   fetchDeals();
-},[]);
+
 
     
     return (
