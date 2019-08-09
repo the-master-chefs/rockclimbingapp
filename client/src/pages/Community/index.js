@@ -15,38 +15,38 @@ function fetchPictures() {
     })
     .then(res => res.json())
     .then(data => {
-      console.log('this is the data', data)
+      console.log('this is the picture data', data)
       setPicture(data);
     }); 
 }
 
-// function fetchArticles() {
-//   fetch("http://localhost:3001/type/article", {
-//       method: "GET"
-//     })
-//     .then(res => res.json())
-//     .then(data => {
-//       setArticle(data);
-//     }); 
-//     console.log({article})
-// }
+ function fetchArticles() {
+   fetch("http://localhost:3001/type/article", {
+       method: "GET"
+     })
+     .then(res => res.json())
+     .then(data => {
+      console.log('this is the article data', data)
+       setArticle(data);
+     }); 
+ }
 
-// function fetchDeals() {
-//   fetch("http://localhost:3001/type/deal", {
-//       method: "GET"
-//     })
-//     .then(res => res.json())
-//     .then(data => {
-//       setDeal(data);
-//     }); 
-//     console.log({deal})
-// }
+ function fetchDeals() {
+   fetch("http://localhost:3001/type/deal", {
+       method: "GET"
+     })
+     .then(res => res.json())
+     .then(data => {
+      console.log('this is the deal data', data)
+       setDeal(data);
+     }); 
+     console.log({deal})
+ }
 useEffect(() => {
   fetchPictures();
-  // fetchArticles();
-  // fetchDeals();
+  fetchArticles();
+  fetchDeals();
 },[]);
-console.log({picture})
 
     
     return (
