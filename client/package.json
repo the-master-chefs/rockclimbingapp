@@ -2,6 +2,7 @@
   "name": "rockclimbingapp",
   "version": "0.1.0",
   "private": true,
+  "main": "server.js",
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.1.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.19",

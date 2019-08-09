@@ -6,7 +6,8 @@ export const getRandomDog = createHttpRedux("GET_RANDOM_DOG", "breeds/image/rand
 
 const store = configureStore({
   reducer: {
-    users
+    users,
+    dog: getRandomDog.reducer
   }
 });
 
