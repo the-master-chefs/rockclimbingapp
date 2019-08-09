@@ -1,30 +1,59 @@
 import React, { useState, useEffect } from 'react';
 import "./Community.css";
-var cheerio = require("cheerio");
 
-var axios = require("axios");
+
 
 export function Community() {
+const [picture, setPicture] = useState([]);
 const [article, setArticle] = useState([]);
+const [deal, setDeal] = useState([]);
 
-  useEffect(() => {
-    fetch("/scrape", {
+function fetchPictures() {
+  console.log('fetching pictures')
+  fetch("/type/picture", {
       method: "GET"
     })
     .then(res => res.json())
     .then(data => {
-      setArticle(data);
-    });     
-}); 
-    console.log({article}) 
+      console.log('this is the data', data)
+      setPicture(data);
+    }); 
+}
+
+// function fetchArticles() {
+//   fetch("http://localhost:3001/type/article", {
+//       method: "GET"
+//     })
+//     .then(res => res.json())
+//     .then(data => {
+//       setArticle(data);
+//     }); 
+//     console.log({article})
+// }
+
+// function fetchDeals() {
+//   fetch("http://localhost:3001/type/deal", {
+//       method: "GET"
+//     })
+//     .then(res => res.json())
+//     .then(data => {
+//       setDeal(data);
+//     }); 
+//     console.log({deal})
+// }
+useEffect(() => {
+  fetchPictures();
+  // fetchArticles();
+  // fetchDeals();
+},[]);
+console.log({picture})
+
     
     return (
       <div>
       
         
-          <h3>Community</h3>
-        
-        
+      {JSON.stringify(picture)}
       </div>
     ); 
 

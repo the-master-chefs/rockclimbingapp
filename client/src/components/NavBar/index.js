@@ -1,8 +1,6 @@
 import React from "react";
 import { useAuth0 } from "../../react-auth0-wrapper";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
 import Image from "../userImage"
 import Name from "../userName"
 import "./nav.css";
