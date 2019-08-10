@@ -11,6 +11,13 @@ class Gauge extends Component {
   startColor = '#6495ed'; // cornflowerblue
   endColor = '#dc143c'; // crimson
  
+  
+
+
+
+
+
+
     render() {
         const radius = 100;
         const interpolate = interpolateRgb(this.startColor, this.endColor);
