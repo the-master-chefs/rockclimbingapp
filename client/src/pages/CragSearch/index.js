@@ -12,15 +12,10 @@ import Weather from "../../components/Weather/index.js";
 import MPWidget from "../../components/MPWidget/index.js";
 import { getRandomDog } from "../../store.js";
 
+import Test from "../../components/G#";
 
-function CragSearch(props) {
-  if(props.dog.loading) {
-    return <div>Loading</div>;
-  }
-  if(props.dog.data && props.dog.data.message){
-    return <img onClick={()=>props.getRandomDog()} src={props.dog.data.message} alt="dog"/>;
-  }
 
+function CragSearch() {
   return (
     <div>
       <ContainerA id = "Title" >
@@ -47,42 +42,27 @@ function CragSearch(props) {
           </Col>
         </Row>
       </Container>
+      
+      <ContainerA>
+        <Test />
+      </ContainerA>
 
       <ContainerA>
         <p>Seismic Wall: https://waterservices.usgs.gov/nwis/iv/?format=json&bBox=-97.771395,30.2635416,-97.771394,30.2635417&parameterCd=00060,00065&siteStatus=active</p>
         <p>Gus: https://waterservices.usgs.gov/nwis/iv/?format=json&bBox=-97.772229,30.2635416,-97.772227,30.2635417&parameterCd=00060,00065&siteStatus=active</p>
       </ContainerA>
 
-      <ContainerA>
-        <span onClick={()=>props.getRandomDog()}>
-          test
-        </span>
-      </ContainerA>
-        
-
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    getRandomDog: getRandomDog.action(dispatch),
-    logout: payload => dispatch(actions.logout(payload))
-  };
-};
-
-export default connect(function(state){
-  return {
-    name: state.users.name,
-    dog: state.dog
-  };
-}, mapDispatchToProps)(CragSearch);
+export default CragSearch;
 
 
 
